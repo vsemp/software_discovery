@@ -390,7 +390,7 @@ token_to_labels = get_token_to_labels(label_to_tokens)
 label_to_token_groups = get_label_to_token_groups(token_to_labels)
 # Generate rules for all labels      
 rules = get_rules(label_to_tokens, token_to_labels, label_to_token_groups, limit = 20)
-print("rules are with threshold = 20 and average number of rules = 20 "
+print("rules are with threshold = 20 and average number of rules = 18 "
       "are generated {}".format(current_milli_time()), file=log)
 
 # Free memory
@@ -416,7 +416,7 @@ res_matrix, parameters = check_rules_on_anthony_data(rules, anthony_data, thresh
 print("rules are applied to test data {}".format(current_milli_time()), file=log)
 
 
-parameters['training_set'] = 'apt-tuples'
+parameters['training_set'] = 'anthony-intersect-training'
 save_results(res_matrix, parameters, r'../../../results',
              filename = parameters['training_set'] + '_' + str(round(parameters['avg_num_rules']))  + '_' + str(parameters['threshold']))
 print("results of the evaluation on test data are saved {}".format(current_milli_time()), file=log)
