@@ -422,7 +422,7 @@ save_results(res_matrix, parameters, r'../../../results',
 print("results of the evaluation on test data are saved {}".format(current_milli_time()), file=log)
 
 import json
-dirname = r'C:\Users\20176817\Documents\CloudArticle\results'
+dirname = r'../../../results'
 filename = parameters['training_set'] + '_' + str(round(parameters['avg_num_rules']))  + '_' + str(parameters['threshold'])
 with open(os.path.join(dirname, filename + "_rules.json"), encoding='utf8', mode ='w') as f:
    json.dump(rules, f, indent=0, separators=(',', ':'))
