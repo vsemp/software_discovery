@@ -389,8 +389,8 @@ token_to_labels = get_token_to_labels(label_to_tokens)
 # Again get the map from labels to categorized tokens
 label_to_token_groups = get_label_to_token_groups(token_to_labels)
 # Generate rules for all labels      
-rules = get_rules(label_to_tokens, token_to_labels, label_to_token_groups, limit = 20)
-print("rules are with threshold = 20 and average number of rules = 18 "
+rules = get_rules(label_to_tokens, token_to_labels, label_to_token_groups, limit = 1)
+print("rules are with threshold = 20 and average number of rules = 1 "
       "are generated {}".format(current_milli_time()), file=log)
 
 # Free memory
