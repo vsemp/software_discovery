@@ -367,7 +367,7 @@ log = open("log.txt", "w")
 #
 # Get label to tokens corpus from a file (apt or yum / paths or tuples or names)
 print("start time {}".format(current_milli_time()), file=log)
-label_to_tokens = get_label_to_tokens(r'C:\Users\20176817\Documents\CloudArticle\vladimir\vladimir\apt\tuples')
+label_to_tokens = get_label_to_tokens(r'../../../vladimir/vladimir/apt/tuples')
 # anthony_corpus = read_anthony_data(r'../../../yaml/yaml/training', union = False)
 ## Filter out labels given by yum that refer to i686 architecture
 # anthony_corpus = {k: v for k, v in anthony_corpus.items() if k[-5:] != '.i686'
