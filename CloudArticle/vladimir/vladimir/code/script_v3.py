@@ -366,15 +366,15 @@ log = open("log.txt", "w")
 # Generate rules from the corpus
 #
 # Get label to tokens corpus from a file (apt or yum / paths or tuples or names)
-#label_to_tokens = get_label_to_tokens(r'C:\Users\20176817\Documents\CloudArticle\vladimir\vladimir\apt\tuples')
 print("start time {}".format(current_milli_time()), file=log)
-anthony_corpus = read_anthony_data(r'../../../yaml/yaml/training', union = False)
+label_to_tokens = get_label_to_tokens(r'C:\Users\20176817\Documents\CloudArticle\vladimir\vladimir\apt\tuples')
+# anthony_corpus = read_anthony_data(r'../../../yaml/yaml/training', union = False)
 ## Filter out labels given by yum that refer to i686 architecture
-anthony_corpus = {k: v for k, v in anthony_corpus.items() if k[-5:] != '.i686'
-                   and 'apache2' not in k} 
-print("anthony data is loaded {}".format(current_milli_time()), file=log)
-label_to_tokens = transform_anthony_intersection(anthony_corpus)
-print("intersections are taken from data {}".format(current_milli_time()), file=log)
+# anthony_corpus = {k: v for k, v in anthony_corpus.items() if k[-5:] != '.i686'
+                #    and 'apache2' not in k} 
+print("apt-tuples data is loaded {}".format(current_milli_time()), file=log)
+# label_to_tokens = transform_anthony_intersection(anthony_corpus)
+# print("intersections are taken from data {}".format(current_milli_time()), file=log)
 # Get the inverse map
 token_to_labels = get_token_to_labels(label_to_tokens)
 # Get the map from labels to categorized tokens
@@ -390,7 +390,7 @@ token_to_labels = get_token_to_labels(label_to_tokens)
 label_to_token_groups = get_label_to_token_groups(token_to_labels)
 # Generate rules for all labels      
 rules = get_rules(label_to_tokens, token_to_labels, label_to_token_groups, limit = 1)
-print("rules are with threshold = 20 and average number of rules = 1 "
+print("rules with threshold = 1 and average number of rules = 1 "
       "are generated {}".format(current_milli_time()), file=log)
 
 # Free memory
@@ -416,7 +416,7 @@ res_matrix, parameters = check_rules_on_anthony_data(rules, anthony_data, thresh
 print("rules are applied to test data {}".format(current_milli_time()), file=log)
 
 
-parameters['training_set'] = 'anthony-intersect-training'
+parameters['training_set'] = 'apt-tuples'
 save_results(res_matrix, parameters, r'../../../results',
              filename = parameters['training_set'] + '_' + str(round(parameters['avg_num_rules']))  + '_' + str(parameters['threshold']))
 print("results of the evaluation on test data are saved {}".format(current_milli_time()), file=log)

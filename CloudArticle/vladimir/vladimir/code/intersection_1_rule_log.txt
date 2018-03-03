@@ -2,7 +2,7 @@ start time 1520105845905
 anthony data is loaded 1520106961757
 intersections are taken from data 1520106963734
 duplicates are filtered 1520106963757
-rules are with threshold = 20 and average number of rules = 1 are generated 1520106964069
+rules with threshold = 1 and average number of rules = 1 are generated 1520106964069
 test data is read 1520109235791
 rules are filtered 1520109235792
 rules are applied to test data 1520109381926
