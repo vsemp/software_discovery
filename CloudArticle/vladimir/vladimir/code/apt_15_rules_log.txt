@@ -1,0 +1,9 @@
+start time 1520182424622
+apt-tuples data is loaded 1520182434341
+duplicates are filtered 1520182465378
+rules with threshold = 20 and average number of rules = 15 are generated 1520182512671
+test data is read 1520184428247
+rules are filtered 1520184428945
+rules are applied to test data 1520186571095
+results of the evaluation on test data are saved 1520186571217
+rules are saved 1520186571241
