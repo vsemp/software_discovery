@@ -8,3 +8,7 @@ rules are filtered 1520109235792
 rules are applied to test data 1520109381926
 results of the evaluation on test data are saved 1520109382053
 rules are saved 1520109382062
+
+summary:
+time to generate rules = 312 milliseconds
+time to test rules = 146134 milliseconds

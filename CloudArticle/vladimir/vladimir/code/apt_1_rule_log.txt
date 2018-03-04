@@ -7,3 +7,8 @@ rules are filtered 1520179068098
 rules are applied to test data 1520179210472
 results of the evaluation on test data are saved 1520179210607
 rules are saved 1520179210616
+
+summary:
+time to generate rules for all apt-get packages = 38125 milliseconds
+time to test rules = 142374 milliseconds
+
